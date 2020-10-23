@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Uygulama.Views.UserInterface">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0" ></OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="4*"></RowDefinition>
+                <RowDefinition Height="4*"></RowDefinition>
+                <RowDefinition Height="4*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
+                <Label Text="Sn" FontSize="Large"  HorizontalOptions="Start" VerticalOptions="Start"/>
+                <Label x:Name="lblAd"  FontSize="Large"/>
+                <Label x:Name="lblSoyad"  FontSize="Large"/>
+                <Label x:Name="eren"/>
+            </StackLayout>
+            <StackLayout Grid.Row="0" Grid.Column="1">
+                <Button x:Name="Btn_Cıkıs" Text="Çıkış" Clicked="Cıkıs" FontSize="Large" HorizontalOptions="End" VerticalOptions="End"></Button>
+            </StackLayout>
+            <StackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="White" Margin="20,0,20,0">
+                <Image Source="Giris.png" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"  WidthRequest="150" HeightRequest="125">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Giris_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </StackLayout>
+            <StackLayout Grid.Row="2" Grid.Column="0" BackgroundColor="White" Margin="20,0,20,0">
+                <Image Source="istatistik.png" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" WidthRequest="150" HeightRequest="125">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="istatistik_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </StackLayout>
+            <StackLayout Grid.Row="2" Grid.Column="1" BackgroundColor="White" Margin="20,0,20,0">
+                <Image Source="Haberler.png" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" WidthRequest="150" HeightRequest="125">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Haberler_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </StackLayout>
+            <StackLayout Grid.Row="3" Grid.Column="0" BackgroundColor="White" Margin="20,0,20,0">
+                <Image Source="Etkinlikler.png" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" WidthRequest="150" HeightRequest="125">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Etkinlikler_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </StackLayout>
+            <StackLayout Grid.Row="3" Grid.Column="1" BackgroundColor="White" Margin="20,0,20,0">
+                <Image Source="Duyurular.png" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" WidthRequest="150" HeightRequest="125">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Duyurular_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </StackLayout>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage
+             xmlns:local="clr-namespace:Uygulama.Views"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Uygulama.Views.TabMenu.TabControl"
+             NavigationPage.HasNavigationBar="False"
+             BarBackgroundColor="Aqua">
+    <local:Page1 Title="Ana Sayfa" Icon="home.png"/>
+    <local:StudentsInfo Title="Öğrenci Bilgi" Icon="kisisel1.png"/>
+    <local:WebEtkinlik Title="Etkinlikler" Icon="etkinlik1.png"/>
+    <local:WebHaber Title="Haberler" Icon="haber1.png"/>
+    <local:WebIstatistik Title="İstatistik" Icon="istatistik1.png"/>
+
+
+</TabbedPage>

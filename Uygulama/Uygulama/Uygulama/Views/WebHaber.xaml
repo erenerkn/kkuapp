@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Uygulama.Views.WebHaber">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0" ></OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <ListView x:Name="lstView" HasUnevenRows="True" ItemTapped="lstView_ItemTappedAsync">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+
+
+                            <StackLayout Orientation="Horizontal" Grid.Column="0">
+                                <Label Text="{Binding Id}" FontSize="30" TextColor="White" BackgroundColor="Purple" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+                            </StackLayout>
+                            <StackLayout Orientation="Vertical" Grid.Column="1">
+                                <Label Text="{Binding Header}" TextColor="Black" VerticalTextAlignment="Center"/>
+                            </StackLayout>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Uygulama.Views.Page1">
+    <AbsoluteLayout>
+
+
+        <Grid Margin="10,10,10,10" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1"  >
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <BoxView  BackgroundColor="#ffa8b4" Grid.Row="0"/>
+        <BoxView  BackgroundColor="#43ffd5" Grid.Row="1"/>
+        <BoxView  BackgroundColor="#4ef2ff" Grid.Row="2"/>
+        <BoxView  BackgroundColor="#ffe38b" Grid.Row="3"/>
+        <BoxView  BackgroundColor="#f963ff" Grid.Row="4"/>
+        <BoxView  BackgroundColor="#7563ff" Grid.Row="5"/>
+
+
+            <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="10"/>
+            </Grid.ColumnDefinitions>
+            <BoxView  BackgroundColor="#ff8797" Grid.Column="0" />
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="10"/>
+                </Grid.ColumnDefinitions>
+                <BoxView  BackgroundColor="#ff6377" Grid.Column="0"/>
+                <Label Text="Öğrenci İşleri"  TextColor="White" HorizontalOptions="Start" VerticalOptions="Center" FontSize="20" FontAttributes="Bold" Margin="10,0,0,0"/>
+                <Image Source="education.png" HorizontalOptions="End" VerticalOptions="Center" Margin="0,0,10,0"/>
+                <Button BackgroundColor="Transparent" Clicked="ogrbilgi"/>
+            </Grid>
+
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="10"/>
+            </Grid.ColumnDefinitions>
+            <BoxView  BackgroundColor="#00efb9" Grid.Column="0" />
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="10"/>
+                </Grid.ColumnDefinitions>
+                <BoxView  BackgroundColor="#00dbaa" Grid.Column="0"/>
+                <Label Text="Kütüphane Bilgileri" TextColor="White" HorizontalOptions="Start" VerticalOptions="Center" FontSize="20" FontAttributes="Bold" Margin="10,0,0,0"/>
+                <Image Source="library.png" HorizontalOptions="End" VerticalOptions="Center" Margin="0,0,10,0"/>
+                <Button BackgroundColor="Transparent" Clicked="kutuphane"/>
+            </Grid>
+
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="10"/>
+            </Grid.ColumnDefinitions>
+            <BoxView  BackgroundColor="#15e2f2" Grid.Column="0" />
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="10"/>
+                </Grid.ColumnDefinitions>
+                <BoxView  BackgroundColor="#0fcedd" Grid.Column="0"/>
+                <Label Text="Alınan Dersler" TextColor="White" HorizontalOptions="Start" VerticalOptions="Center" FontSize="20" FontAttributes="Bold" Margin="10,0,0,0"/>
+                <Image Source="bookshelf.png" HorizontalOptions="End" VerticalOptions="Center" Margin="0,0,10,0"/>
+                <Button BackgroundColor="Transparent" Clicked="alders"/>
+            </Grid>
+
+        </Grid>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="10"/>
+            </Grid.ColumnDefinitions>
+            <BoxView  BackgroundColor="#fad45d" Grid.Column="0" />
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="10"/>
+                </Grid.ColumnDefinitions>
+                <BoxView  BackgroundColor="#f7c72e" Grid.Column="0"/>
+                <Label Text="Yemekhane Bilgileri"  TextColor="White" HorizontalOptions="Start" VerticalOptions="Center" FontSize="20" FontAttributes="Bold"     Margin="10,0,0,0"/>
+                <Image Source="chef.png" HorizontalOptions="End" VerticalOptions="Center" Margin="0,0,10,0"/>
+                <Button BackgroundColor="Transparent" Clicked="yemekhane"/>
+            </Grid>
+
+        </Grid>
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="10"/>
+            </Grid.ColumnDefinitions>
+            <BoxView  BackgroundColor="#eb63ff" Grid.Column="0" />
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="10"/>
+                </Grid.ColumnDefinitions>
+                <BoxView  BackgroundColor="#d163ff" Grid.Column="0"/>
+                <Label Text="Duyurular" TextColor="White" HorizontalOptions="Start" VerticalOptions="Center" FontSize="20" FontAttributes="Bold" Margin="10,0,0,0"/>
+                <Image Source="advertising.png" HorizontalOptions="End" VerticalOptions="Center" Margin="0,0,10,0"/>
+                <Button BackgroundColor="Transparent" Clicked="duyuru"/>
+            </Grid>
+
+        </Grid>
+            <Grid Grid.Row="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="10"/>
+                </Grid.ColumnDefinitions>
+                <BoxView  BackgroundColor="#7b6af8" Grid.Column="0" />
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="10"/>
+                    </Grid.ColumnDefinitions>
+                    <BoxView  BackgroundColor="#8475f7" Grid.Column="0"/>
+                    <Label Text="Sosyal" TextColor="White" HorizontalOptions="Start" VerticalOptions="Center" FontSize="20" FontAttributes="Bold" Margin="10,0,0,0"/>
+                    <Image Source="like.png" HorizontalOptions="End" VerticalOptions="Center" Margin="0,0,10,0"/>
+                    <Button BackgroundColor="Transparent" Clicked="Button_Clicked"/>
+
+                </Grid>
+
+            </Grid>
+
+
+
+
+
+
+
+        </Grid>
+     <ActivityIndicator x:Name="indicator" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.5,100,100"/>
+    </AbsoluteLayout>
+</ContentPage>

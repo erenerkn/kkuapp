@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Uygulama.Views.StudentsInfo">
+
+    <AbsoluteLayout BackgroundColor="White">
+        <Image Source="ksl.png" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1"  VerticalOptions="EndAndExpand" />
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="6*"/>
+                <RowDefinition Height="4*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Row="1" Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+            <StackLayout Orientation="Horizontal" Grid.Row="0" >
+                <Label Text="TC No:"/>
+                <Label x:Name="lblTc" />
+            </StackLayout>
+                <StackLayout Orientation="Horizontal" Grid.Row="1">
+                <Label Text="Ad Soyad:"/>
+                <Label x:Name="lblAd"  />
+                <Label x:Name="lblSoyad" />
+            </StackLayout>
+                <StackLayout Orientation="Horizontal" Grid.Row="2">
+                <Label Text="Program:"/>
+                <Label x:Name="lblProgram" />
+            </StackLayout>
+                <StackLayout Orientation="Horizontal" Grid.Row="3">
+                <Label Text="Öğrenci No:"/>
+                <Label x:Name="lblNo" />
+            </StackLayout>
+                <StackLayout Orientation="Horizontal" Grid.Row="4">
+                <Label Text="Telefon:"/>
+                <Label x:Name="lblTelefon" />
+            </StackLayout>
+                <StackLayout Orientation="Horizontal" Grid.Row="5">
+                <Label Text="Fakülte:"/>
+                <Label x:Name="lblFakulte" />
+            </StackLayout>
+                <StackLayout Orientation="Horizontal" Grid.Row="6">
+                <Label Text="Bölüm:"/>
+                <Label x:Name="lblBolum" />
+            </StackLayout>
+                <StackLayout Orientation="Horizontal" Grid.Row="7">
+                <Label Text="Derece:"/>
+                <Label x:Name="lblDerece"/>
+            </StackLayout>
+                <StackLayout Orientation="Horizontal" Grid.Row="8">
+                <Label Text="Danışman:"/>
+                <Label x:Name="lblDanısman" />
+            </StackLayout>
+            </Grid>
+        </Grid>
+            
+    </AbsoluteLayout>
+    
+</ContentPage>

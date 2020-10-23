@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Uygulama.MainPages"
+             BackgroundImage="ark"
+             NavigationPage.HasNavigationBar="False">
+
+        <AbsoluteLayout>
+
+
+
+
+
+        <Grid AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="4*"/>
+                    <RowDefinition Height="3*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="10*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Grid.Row="1" Grid.Column="1" VerticalOptions="Center" >
+                    <Button Text="Öğrenci Portalı" x:Name="ogrenci" BackgroundColor="#81D4FA"  TextColor="White" BorderRadius="7" Clicked="ogrencigirisi" ></Button>
+                    <Button Text="Personal Portalı" x:Name="personal" BackgroundColor="#4FC3F7"  TextColor="White" BorderRadius="7" Clicked="personal_ClickedAsync"></Button>
+                    <Button Text="kku.edu.tr" x:Name="site" BackgroundColor="#29B6F6" TextColor="White" BorderRadius="7" Clicked="sitegirisi"></Button>
+                </StackLayout>
+                
+            </Grid>
+            <ActivityIndicator x:Name="indicator" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.5,100,100"/>
+        </AbsoluteLayout>
+</ContentPage>

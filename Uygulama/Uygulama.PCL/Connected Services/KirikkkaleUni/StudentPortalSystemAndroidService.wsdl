@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetStudentInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StudentNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStudentInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStudentInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StudentLogin2System">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StudentNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StudentPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StudentLogin2SystemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StudentLogin2SystemResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStudentLectures">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StudentNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStudentLecturesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStudentLecturesResult" type="tns:ArrayOfKkuOgrenciAlinanDersler" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfKkuOgrenciAlinanDersler">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="KkuOgrenciAlinanDersler" nillable="true" type="tns:KkuOgrenciAlinanDersler" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="KkuOgrenciAlinanDersler">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DERS_KODU" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DERS_ADI" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OGR_GOR_AD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OGR_GOR_SOYAD" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetStudentAutomationLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StudentNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStudentAutomationLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStudentAutomationLoginResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetYemekhaneDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StudentNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetYemekhaneDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetYemekhaneDetailsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetKutuphaneData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StudentNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetKutuphaneDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetKutuphaneDataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIstatistikData">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetIstatistikDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetIstatistikDataResult" type="tns:ArrayOfToplamOgrenci" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfToplamOgrenci">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ToplamOgrenci" nillable="true" type="tns:ToplamOgrenci" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ToplamOgrenci">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="myoBayan" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="myoErkek" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="lisansBayan" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="lisansErkek" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ylBayan" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ylErkek" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="doktoraBayan" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="doktoraErkek" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetWebDuyuru">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetWebDuyuruResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWebDuyuruResult" type="tns:ArrayOfDuyuruEtkinlikHaber" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDuyuruEtkinlikHaber">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DuyuruEtkinlikHaber" nillable="true" type="tns:DuyuruEtkinlikHaber" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DuyuruEtkinlikHaber">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Header" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="No" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetWebHaber">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetWebHaberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWebHaberResult" type="tns:ArrayOfDuyuruEtkinlikHaber" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWebEtkinlik">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetWebEtkinlikResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWebEtkinlikResult" type="tns:ArrayOfDuyuruEtkinlikHaber" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetStudentInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStudentInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetStudentInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStudentInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="StudentLogin2SystemSoapIn">
+    <wsdl:part name="parameters" element="tns:StudentLogin2System" />
+  </wsdl:message>
+  <wsdl:message name="StudentLogin2SystemSoapOut">
+    <wsdl:part name="parameters" element="tns:StudentLogin2SystemResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStudentLecturesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStudentLectures" />
+  </wsdl:message>
+  <wsdl:message name="GetStudentLecturesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStudentLecturesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStudentAutomationLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStudentAutomationLogin" />
+  </wsdl:message>
+  <wsdl:message name="GetStudentAutomationLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStudentAutomationLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetYemekhaneDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetYemekhaneDetails" />
+  </wsdl:message>
+  <wsdl:message name="GetYemekhaneDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetYemekhaneDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetKutuphaneDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetKutuphaneData" />
+  </wsdl:message>
+  <wsdl:message name="GetKutuphaneDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetKutuphaneDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetIstatistikDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIstatistikData" />
+  </wsdl:message>
+  <wsdl:message name="GetIstatistikDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIstatistikDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWebDuyuruSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWebDuyuru" />
+  </wsdl:message>
+  <wsdl:message name="GetWebDuyuruSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWebDuyuruResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWebHaberSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWebHaber" />
+  </wsdl:message>
+  <wsdl:message name="GetWebHaberSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWebHaberResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWebEtkinlikSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWebEtkinlik" />
+  </wsdl:message>
+  <wsdl:message name="GetWebEtkinlikSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWebEtkinlikResponse" />
+  </wsdl:message>
+  <wsdl:portType name="StudentPortalSystemAndroidServiceSoap">
+    <wsdl:operation name="GetStudentInfo">
+      <wsdl:input message="tns:GetStudentInfoSoapIn" />
+      <wsdl:output message="tns:GetStudentInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StudentLogin2System">
+      <wsdl:input message="tns:StudentLogin2SystemSoapIn" />
+      <wsdl:output message="tns:StudentLogin2SystemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStudentLectures">
+      <wsdl:input message="tns:GetStudentLecturesSoapIn" />
+      <wsdl:output message="tns:GetStudentLecturesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStudentAutomationLogin">
+      <wsdl:input message="tns:GetStudentAutomationLoginSoapIn" />
+      <wsdl:output message="tns:GetStudentAutomationLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetYemekhaneDetails">
+      <wsdl:input message="tns:GetYemekhaneDetailsSoapIn" />
+      <wsdl:output message="tns:GetYemekhaneDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetKutuphaneData">
+      <wsdl:input message="tns:GetKutuphaneDataSoapIn" />
+      <wsdl:output message="tns:GetKutuphaneDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIstatistikData">
+      <wsdl:input message="tns:GetIstatistikDataSoapIn" />
+      <wsdl:output message="tns:GetIstatistikDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWebDuyuru">
+      <wsdl:input message="tns:GetWebDuyuruSoapIn" />
+      <wsdl:output message="tns:GetWebDuyuruSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWebHaber">
+      <wsdl:input message="tns:GetWebHaberSoapIn" />
+      <wsdl:output message="tns:GetWebHaberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWebEtkinlik">
+      <wsdl:input message="tns:GetWebEtkinlikSoapIn" />
+      <wsdl:output message="tns:GetWebEtkinlikSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="StudentPortalSystemAndroidServiceSoap" type="tns:StudentPortalSystemAndroidServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetStudentInfo">
+      <soap:operation soapAction="http://tempuri.org/GetStudentInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StudentLogin2System">
+      <soap:operation soapAction="http://tempuri.org/StudentLogin2System" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStudentLectures">
+      <soap:operation soapAction="http://tempuri.org/GetStudentLectures" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStudentAutomationLogin">
+      <soap:operation soapAction="http://tempuri.org/GetStudentAutomationLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetYemekhaneDetails">
+      <soap:operation soapAction="http://tempuri.org/GetYemekhaneDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKutuphaneData">
+      <soap:operation soapAction="http://tempuri.org/GetKutuphaneData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIstatistikData">
+      <soap:operation soapAction="http://tempuri.org/GetIstatistikData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWebDuyuru">
+      <soap:operation soapAction="http://tempuri.org/GetWebDuyuru" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWebHaber">
+      <soap:operation soapAction="http://tempuri.org/GetWebHaber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWebEtkinlik">
+      <soap:operation soapAction="http://tempuri.org/GetWebEtkinlik" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="StudentPortalSystemAndroidServiceSoap12" type="tns:StudentPortalSystemAndroidServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetStudentInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetStudentInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StudentLogin2System">
+      <soap12:operation soapAction="http://tempuri.org/StudentLogin2System" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStudentLectures">
+      <soap12:operation soapAction="http://tempuri.org/GetStudentLectures" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStudentAutomationLogin">
+      <soap12:operation soapAction="http://tempuri.org/GetStudentAutomationLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetYemekhaneDetails">
+      <soap12:operation soapAction="http://tempuri.org/GetYemekhaneDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKutuphaneData">
+      <soap12:operation soapAction="http://tempuri.org/GetKutuphaneData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIstatistikData">
+      <soap12:operation soapAction="http://tempuri.org/GetIstatistikData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWebDuyuru">
+      <soap12:operation soapAction="http://tempuri.org/GetWebDuyuru" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWebHaber">
+      <soap12:operation soapAction="http://tempuri.org/GetWebHaber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWebEtkinlik">
+      <soap12:operation soapAction="http://tempuri.org/GetWebEtkinlik" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="StudentPortalSystemAndroidService">
+    <wsdl:port name="StudentPortalSystemAndroidServiceSoap" binding="tns:StudentPortalSystemAndroidServiceSoap">
+      <soap:address location="https://********************************.asmx" />
+    </wsdl:port>
+    <wsdl:port name="StudentPortalSystemAndroidServiceSoap12" binding="tns:StudentPortalSystemAndroidServiceSoap12">
+      <soap12:address location="https://********************************.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Uygulama.Views.YemekhaneDetail">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0" ></OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="StartAndExpand">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Son Yemek Tarihi:"/>
+                <Label x:Name="lblTarih" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Son Yemek Saati:"/>
+                <Label x:Name="lblSaat"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Son Yemek Yeri;"/>
+                <Label x:Name="lblYer"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Bakiye;"/>
+                <Label x:Name="lblBakiye"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
